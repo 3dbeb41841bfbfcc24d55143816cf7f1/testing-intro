@@ -150,7 +150,7 @@ We know that our code is wrong but our test is passing, so what do we do?
 Answer: Our testing is insufficient. We need to improve our testing by adding more tests to reveal that our code is wrong / buggy. So let's add the following test to `leap-year-spec.js`:
 
 ```javascript
-it("should return false for the year 1901", function () {
+it("should return true for the year 1900", function () {
     var result = isLeapYear(1900);
     expect(result).toBe(true);
   });
