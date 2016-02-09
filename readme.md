@@ -84,8 +84,8 @@ exports.isLeapYear = function(year) {
 ```javascript
 var isLeapYear = require("../leap-year").isLeapYear;
 
-describe("isLeapYear", function () {
-  it("should return false for the year 1901", function () {
+describe("isLeapYear", function() {
+  it("should return false for the year 1901", function() {
     var result = isLeapYear(1901);
     expect(result).toBe(false);
   });
@@ -150,8 +150,8 @@ We know that our code is wrong but our test is passing, so what do we do?
 Answer: Our testing is insufficient. We need to improve our testing by adding more tests to reveal that our code is wrong / buggy. So let's add the following test to `leap-year-spec.js`:
 
 ```javascript
-it("should return true for the year 1900", function () {
-    var result = isLeapYear(1900);
+  it("should return true for the year 1904", function() {
+    var result = isLeapYear(1904);
     expect(result).toBe(true);
   });
 ```
@@ -173,7 +173,7 @@ exports.isLeapYear = function(year) {
 Now we can see that both of our tests pass, but we still have a problem. We need to test for those pesky years that are multiples of 400, such as the year 2000:
 
 ```javascript
-it("should return true for the year 2000", function () {
+it("should return true for the year 2000", function() {
   var result = isLeapYear(2000);
   expect(result).toBe(true);
 });
